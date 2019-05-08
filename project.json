@@ -1,0 +1,19 @@
+{
+  "s3": {
+    "stage": {
+      "bucket": "projects-staging.seattletimes.com",
+      "path": "square-equinox"
+    },
+    "live": {
+      "bucket": "projects.seattletimes.com",
+      "path": ""
+    }
+  },
+  "title": "",
+  "description": "",
+  "url": "",
+  "image": "assets/social.jpg",
+  "sheets": ["1aPubLipLVsZ6Xdh3Om62Iprp2pyNDHSbJz-ZG-qMSks"],
+  "embedded": false,
+  "production": false
+}

@@ -1,0 +1,39 @@
+<section class="scroll-content">
+      <div class="backdrop">
+      
+
+      <svg>
+      <g id="Existing" class="layer" style="position:relative; z-index:10"><image xlink:href="./assets/photos/orca-organs_Whale.png" width="100%" height="100%"></g>
+
+      
+
+      <g id="_405_BRT" data-name="405 BRT" class="layer" style="position:absolute; top:0; left:0; z-index:2"><image xlink:href="./assets/photos/orca-organs_on-head.png" width="100%" height="100%"></g>
+
+      <g id="_522_BRT" data-name="522 BRT" class="layer" style="position:absolute; top:0; left:0; z-index:3"><image xlink:href="./assets/photos/orca-organs_Air.png" width="100%" height="100%"></g>
+
+      <g id="Ballard" data-name="Ballard" class="layer" style="position:absolute; top:0; left:0; z-index:4"><image xlink:href="./assets/photos/orca-organs_phonic.png" width="100%" height="100%"></g>
+
+      <g id="West_Seattle" data-name="West_Seattle" class="layer" style="position:absolute; top:0; left:0; z-index:5; opacity:0.5"><image xlink:href="./assets/photos/orca-organs_MELON.png" width="100%" height="100%"></g>
+
+      <g id="Everett" data-name="Everett" class="layer" style="position:absolute; top:0; left:0; z-index:5; opacity:0.5"><image xlink:href="./assets/photos/orca-organs_Top-Skull.png" width="100%" height="100%"></g>
+
+      <g id="Redmond" data-name="Redmond" class="layer" style="position:absolute; top:0; left:0; z-index:5; opacity:0.5"><image xlink:href="./assets/photos/orca-organs_Bam-Jaw.png" width="100%" height="100%"></g>
+
+      <g id="Kirkland" class="layer" style="position:relative; z-index:10"><image xlink:href="./assets/photos/orca-organs_Whale.png" width="100%" height="100%"></g>
+      </svg>
+        
+        
+      </div>
+
+      <div class="first layer" data-layer="Existing">
+        <p>UNDERWATER SOUNDS</p>
+        <p>As orcas chase prey into deeper, darker and more turbid waters, their ability to see declines. So orcas use sound for communication, navigation and finding prey.
+      </div>
+      <% json.anatomy.forEach(function(anatomy) { %>
+      <div class="layer" data-layer="<%= anatomy.layer %>">
+        <h2><%= anatomy.head %></h2>
+        <p><%= anatomy.text %></p>
+        
+      </div>
+      <% }) %>
+    </section>
