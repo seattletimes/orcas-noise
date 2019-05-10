@@ -6,7 +6,7 @@ require("./lib/ads");
 //setTimeout(() => paywall(11003788), 3000);
 //var track = require("./lib/tracking");
 //require("component-responsive-frame/child");
-require("./bc-preroll");
+//require("./bc-preroll");
 
 
 var $ = require("./lib/qsa");
