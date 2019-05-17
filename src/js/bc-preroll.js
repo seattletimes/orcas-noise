@@ -6,11 +6,11 @@ var makePlayer = function(id) {
 `;
 };
 
-$(".bc-preroll").forEach(function(container) {
-  var id = container.getAttribute("data-id");
+$(".bc-preroll").forEach(function(vidbox) {
+  var id = vidbox.getAttribute("data-id");
   var replace = function() {
-    container.innerHTML = makePlayer(id);
-    container.removeEventListener("click", replace);
+    vidbox.innerHTML = makePlayer(id);
+    vidbox.removeEventListener("click", replace);
   };
-  container.addEventListener("click", replace);
+  vidbox.addEventListener("click", replace);
 });

@@ -7,7 +7,27 @@
 @import "seattletimes";
 @import "map";
 @import "bc-preroll";
+@import "eloc";
 
+  .hammer {
+    font-size:80px;
+    font-style:italic;
+
+  }
+ 
+ .subhead {
+    font-size:21px;
+    
+ }
+
+
+ @media (max-width:1200px) and (min-width:721px) {
+ .splash h1 {
+  top:10%;
+  
+ }
+
+ }
 
  .smallContainer{
  	margin: 0 auto;
@@ -50,6 +70,9 @@
   .caption {
   margin: 6px 15px 0;
 }
+  .mediaContainer {
+    display:block;
+  }
 }
 
 .captionLeft {
@@ -107,11 +130,58 @@ header.splash{
 }
 .splash img, h1 {
   position:absolute;
-  top:20%;
-  left:25%;
-  opacity:0.8;
-  width:50%;
+  top:25%;
+  width:100%;
   display:block;
+  color:black;
+  
+}
+
+.fade {
+  animation: fade-in 10s ease 3s backwards 1;
+  color:white;
+  font-size:24px;
+  position:absolute;
+  top:45%;
+  width:100%;
+  text-align:center;
+}
+
+.fade p {
+  margin: 20px auto;
+  max-width:630px;
+}
+
+@media (max-width:1020px) {
+  .fade {
+  position:relative;
+  top:0;
+  left:0;
+  }
+}
+
+.opposite {
+  animation: fade-out 10s ease none 1;
+  color:white;
+    
+}
+
+@keyframes fade-in {
+  0% {
+  opacity:0.0;
+  }
+  100% {
+  opacity:1.0;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+  color:black;
+  }
+  100% {
+  color:white;
+  }
 }
 
 @media (max-width:720px) {
@@ -155,17 +225,7 @@ header.splash{
     border-top: 3px solid rgba(36, 96, 82, 0.8);
     padding-top: 8px;
 
-    &.orange {
-      border-color: @transit-orange;
-    }
-
-    &.purple {
-      border-color: @transit-purple;
-    }
-
-    &.blue {
-      border-color: @transit-blue;
-    }
+    
   }
 }
 
@@ -183,3 +243,4 @@ header.splash{
     font-family: @df-sans;
   }
 }
+

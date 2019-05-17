@@ -4,39 +4,74 @@
   
     <%= t.include("partials/_head.html", grunt.data.json) %>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
   </head>
   <body>
+    <%= t.include("partials/_gtm.html") %>
     <%= t.include("partials/_nav.html") %>
-    <section class="content text-block" id="projects">
+    <section class="content text-block" id="projects" style="background-color:black;padding-top:0px;">
         <header class="splash">
+        <iframe src="./assets/audio/2-seconds-of-silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
             <video src="./assets/video/1_Sound_IntroOrcaDive_fade.mp4" autoplay playsinline>
-            </video><div class="caption"> Southern resident orca whale L95 hunts a salmon on the west side of San Juan Island in September, 2015. (NWFSC/NOAA Fisheries)</div>  
-            <h1 class="headline">THE ROAR BELOW</h1>
-        </header>
-        <div class="byline constrained">
-          Story by <a class="name" href="https://www.seattletimes.com/author/lynda-v-mapes/" target="blank">Lynda V. Mapes</a> |
-          Photographs by <a class="name" href="https://www.seattletimes.com/author/steve-ringman/" target="blank">Steve Ringman</a> <hr style="width:30%">
-          Videos by <a class="name" href="https://www.seattletimes.com/author/ramon-dompor/" target="blank">Ramon Dompor</a> | Graphics by <a class="name" href="https://www.seattletimes.com/author/eeng/" target="blank">Emily M. Eng</a>
-          <hr style="width:30%">
-          <div class="staff">Seattle Times staff</div>
-          <div class="date">Published May 15, 2019</div>
-        </div>
-        <div class="constrained">
+            </video>
+            
+            <div class="headline">
+                <h1  class="opposite hammer">THE ROAR BELOW</h1>
+                <h1 class="opposite subhead">How our noise is hurting orcas' search for salmon
+                </h1>
+            </div>
+            <div class="fade">
             <%= t.renderMarkdown(archieml.story.lede) %>
+
+            <div class="aside-text" style="font-size:16px;text-transform: uppercase;text-align:center;">
+            <p><i class="fa fa-headphones" aria-hidden="true"></i> Best experienced with audio</p>
+             <a href="#first">
+                <p><i class="fas fa-chevron-down" style="font-size:24px;"></i></p>
+             </a>
+             </div>
+        
+            </div>
+        </header>     
+        
+        <div id="first" class="constrained" style="color:white;font-size:24px;">
+            <%= t.renderMarkdown(archieml.story.lede2) %>
+            <p class="aside-text" style="font-size:16px;text-transform: uppercase;text-align:center;">SCROLL FOR MORE</p>
+            <p class="aside-text" style="text-align: center;"><i class="fas fa-chevron-down" style="font-size:24px;"></i></p>
         </div>
+        <div class="byline" style="color:white;">
+        <hr style="width:30%">
+          Story by Lynda V. Mapes |
+          Photographs by Steve Ringman |
+          Videos by Ramon Dompor | Graphics by Emily M. Eng
+          
+          <div class="staff">Seattle Times staff</div>
+          <hr style="width:30%">
+          <div class="date" style="margin-bottom:40px;color:white">Published May 19, 2019</div>
+
+    </div>
+    
+        
         <%= t.include("_prerollVideo.html", { file: "2_Sound_MainVideo_loop_3.2.mp4", id: "6027287123001", runtime: "5:20" }) %>
-        <div class="caption">Hydrophones beneath the surface of Puget Sound reveal disturbances to sea-life that otherwise go unnoticed. (Ramon Dompor / The Seattle Times)</div>
+        
+        <div class="caption">Hydrophones beneath the surface of Puget Sound reveal disturbances to sea life that otherwise go unnoticed. (Ramon Dompor / The Seattle Times)</div>
+
+        </section>
+    <section class="content text-block">
+        
+
+        
+
         <div class="constrained"> 
             <div class="aside">
                 <h3>ABOUT  <br/>THIS SERIES</h3>
-                <p>In the weeks and months ahead, The Seattle Times’ “<a href="https://www.seattletimes.com/seattle-news/environment/hostile-waters-orcas-killer-whale-puget-sound-washington-canada/" targe="_blank">Hostile Waters</a>” series will continue to explore and expose the plight of the southern resident killer whales, among the most-enduring symbols of our region and most-endangered animals. We’ll examine the role humans have played in their decline, what can be done about it and why it matters.</p>
+                <p>The Seattle Times’ “<a href="https://www.seattletimes.com/seattle-news/environment/hostile-waters-orcas-killer-whale-puget-sound-washington-canada/" targe="_blank">Hostile Waters</a>” series is exploring and exposing the plight of the southern resident killer whales, among the most-enduring symbols of our region and most-endangered animals. We’ll examine the role humans have played in their decline, what can be done about it and why it matters.</p>
             </div>
         <%= t.renderMarkdown(archieml.story.noise) %>
         </div>
 
         <div class="smallContainer">
             <img src="./assets/photos/Orcas4_San_Juan_westside.jpg">
-            <div class="caption">Along the west side of San Juan Island, Orcas hunt salmon headed for the Fraser River. Orca families pass on places and techniques for hunting salmon generation after generation. When people fill those same places with ships and boats and noise, orcas have a harder time catching already scarce prey. (Steve Ringman / The Seattle Times)</div>
+            <div class="caption">Along the west side of San Juan Island, orcas hunt salmon headed for the Fraser River. Orca families pass on places and techniques for hunting salmon generation after generation. When people fill those same places with ships and boats and noise, orcas have a harder time catching already scarce prey. (Steve Ringman / The Seattle Times)</div>
         </div>
 
         <div class="constrained">
@@ -49,50 +84,77 @@
     <div class="constrained">
         <%= t.renderMarkdown(archieml.story.chinook) %>
     </div>
-    <div class="constrained">
-        <svg>
-      <g id="Existing" class="layer" style="position:relative; z-index:10"><image xlink:href="./assets/photos/orca-organs_Whale.png" width="100%" height="100%"></g>
+    <div class="smallContainer">
+        <div class="eloc-body">
+        <responsive-child>
+        <div class="outer">
 
-      
+          <div class="info">
+            <div class="details">
+              <h4>Echolocation</h4>
+              <p>Toothed whales, including orcas, and most bats have the ability to locate and identify objects through echoes, which are reflected sound. For killer whales, echolocation is crucial for hunting salmon.</p>
+              <h5>How echolocation works</h5>
+              <p class="note"><i>Click on any number or arrow to begin</i></p>
+            </div>
+            <div class="buttons">
+              <div class="goto back disabled"><i class="fa fa-chevron-left"></i> Previous</div>
+              <div class="goto next">Next <i class="fa fa-chevron-right"></i></div>
+            </div>
+          </div>
 
-      <g id="_405_BRT" data-name="405 BRT" class="layer" style="position:absolute; top:0; left:0; z-index:2"><image xlink:href="./assets/photos/orca-organs_on-head.png" width="100%" height="100%"></g>
+          <div class="image">
+              <img class="background" src="./assets/eloc/echolocation-bkgd.jpg">
+            <div class="overlay"><%= t.include("./assets/eloc/echolocation.svg") %></div>
+          </div>
+          <div class="image-mobile">
+              <img class="background2" src="./assets/eloc/echolocation-bkgd-M.jpg">
+            <div class="overlay-mobile"><%= t.include("./assets/eloc/echolocation-M.svg") %></div>
+          </div>
 
-      <g id="_522_BRT" data-name="522 BRT" class="layer" style="position:absolute; top:0; left:0; z-index:3"><image xlink:href="./assets/photos/orca-organs_Air.png" width="100%" height="100%"></g>
-
-      <g id="Ballard" data-name="Ballard" class="layer" style="position:absolute; top:0; left:0; z-index:4"><image xlink:href="./assets/photos/orca-organs_phonic.png" width="100%" height="100%"></g>
-
-      <g id="West_Seattle" data-name="West_Seattle" class="layer" style="position:absolute; top:0; left:0; z-index:5; opacity:0.5"><image xlink:href="./assets/photos/orca-organs_MELON.png" width="100%" height="100%"></g>
-
-      <g id="Everett" data-name="Everett" class="layer" style="position:absolute; top:0; left:0; z-index:5; opacity:0.5"><image xlink:href="./assets/photos/orca-organs_Top-Skull.png" width="100%" height="100%"></g>
-
-      <g id="Redmond" data-name="Redmond" class="layer" style="position:absolute; top:0; left:0; z-index:5; opacity:0.5"><image xlink:href="./assets/photos/orca-organs_Bam-Jaw.png" width="100%" height="100%"></g>
-
-      <g id="Kirkland" class="layer" style="position:relative; z-index:10"><image xlink:href="./assets/photos/orca-organs_Whale.png" width="100%" height="100%"></g>
-      </svg>
+        <div class="inner">
+          <div class="credits"><i>Sources: Marla Holt, National Oceanic and Atmospheric Administration, Northwest Fisheries Science Center</i><br>EMILY M. ENG / THE SEATTLE TIMES</div>
         </div>
+      </div>
+      </responsive-child>
+      </div>
+
+    </div>
+
+    <div class="smallContainer">
+        <picture>
+        <source media="(min-width:601px)" srcset="./assets/photos/sound-masking-W.jpg"/>
+        <source media="(max-width:600px)" srcset="./assets/photos/sound-masking-M.jpg"/>
+        <img src="./assets/photos/sound-masking-W.jpg.jpg">
+        </picture>
+    </div>
+        
     <div class="constrained">
         <%= t.renderMarkdown(archieml.story.surfacehunt) %>
     </div>
 
     <%= t.include("_prerollVideo.html", { file: "4_dronesurfacehunt_loop.mp4", id: "6027357692001", runtime: "4:43" }) %>
-    <div class="caption">In this rare video footage, two J pod whales chase a chinook salmon, hunting at the surface of the water on the west side of San Juan Island in August 2018. The older whale, J46, after several tries catches the fish and shares it with the youngest member of her family, J53. Credit: Center for Whale Research and Michael Weiss and Darren Croft,  University of Exeter. Taken under NMFS permit 21238
+    <div class="caption">In this rare video footage, two J pod whales chase a chinook salmon, hunting at the surface of the water on the west side of San Juan Island in August 2018. The older whale, J46, after several tries catches the fish and shares it with the youngest member of her family, J53. (Credit: Center for Whale Research and Michael Weiss and Darren Croft,  University of Exeter. Taken under NMFS permit 21238)
     </div>
     <div class="constrained">
         <%= t.renderMarkdown(archieml.story.surfacehuntend) %>
     </div>
     <div class="smallContainer">
         <img src="./assets/photos/orcas4_namu_teeth.jpg">
-        <div class="caption">The teeth of southern resident killer whales are up to 4 inches long, hard and dense as marble, and needle-sharp for shredding salmon. These teeth belonged to Namu the killer whale and are kept at the Burke Museum of Natural History and Culture. (Steve Ringman / The Seattle Times)</div>
+        <div class="caption">The teeth of southern resident killer whales are up to 4 inches long, hard and dense as marble, and needle-sharp for shredding salmon. These teeth belonged to Namu and are kept at the Burke Museum of Natural History and Culture. (Steve Ringman / The Seattle Times)</div>
     </div>
     <div class="constrained">
         <%= t.renderMarkdown(archieml.story.ancienthunters) %>
     </div>
-    <!--<%= t.include("_anatomy.html") %>-->
+    <div class="constrained">
+        <img src="./assets/photos/Orcas4_namu_01.jpg">
+        <div class="caption">Jeff Bradley, mammology collections manager at the Burke Musuem of Natural History and Culture, holds a jawbone from Namu. The world's first captive performing killer whale, Namu was brought by Ted Griffin to his aquarium on Elliott Bay in 1965. The big sockets in the jawbone held his teeth. (Steve Ringman / The Seattle Times)</div>
+    </div>
+    
     <div class="constrained">
         <%= t.renderMarkdown(archieml.story.culture) %>
     </div>
     <img src="./assets/photos/Orcas4_Container_ship_full_horiz.jpg">
-    <div class="caption">Orca whale L87 is dwarfed by the hull of a ship. Orcas raise their voices to be heard and forage less in the presence of vessels. Noise and disturbance is one of the three main threats identified by scientists to the survival of the endangered southern residents that frequent Puget Sound. (Credit: Alan Niles/Maya's Legacy Whale Watching)
+    <div class="caption">Orca L87 plies the Haro Strait as a ship approaches. Killer whales must raise their voices to be heard, and they forage less in the presence of vessels. Noise disturbance is identified by scientists as one of the three main threats to the survival of the endangered southern residents that frequent Puget Sound. (Capt. Alan Niles / Maya's Legacy Whale Watching)
     </div>
     <div class="constrained">
         <%= t.renderMarkdown(archieml.story.maritimeculture) %>
@@ -105,7 +167,11 @@
         <%= t.renderMarkdown(archieml.story.smallcity) %>
     </div>
     <div class="smallContainer">
-        <img src="./assets/photos/heatmap.png"/>
+        <picture>
+        <source media="(min-width:601px)" srcset="./assets/photos/vessel-noise-map-W-960.jpg"/>
+        <source media="(max-width:600px)" srcset="./assets/photos/vessel-noise-map-M.jpg"/>
+        <img src="./assets/photos/vessel-noise-map-W-960.jpg">
+        </picture>
     </div>
     <div class="constrained">
         <div class="aside">
@@ -114,13 +180,11 @@
     </div>
     <%= t.renderMarkdown(archieml.story.port) %>
     </div>
-    <div class="constrained">  
-        <%= t.renderMarkdown(archieml.story.veirs) %>
-    </div>
+    
     <div class="smallContainer">
         <video src="./assets/video/6_Sound_hydrophoneinstall_loop_1.0.mp4" autoplay playsinline loop muted>
         </video>
-        <div class="caption">Val Veirs drops an underwater microphone off shore of his home on the West Side of San Juan Island. Sounds stream in from underwater, from the groans of ships to the rumble of ferries. Credit: Ramon Dompor.</div>
+        <div class="caption">Val Veirs drops an underwater microphone near his home on the west side of San Juan Island. Underwater sounds stream in, from the groans of ships to the rumble of ferries. (Ramon Dompor / The Seattle Times)</div>
     </div>
 
     <div class="constrained">
@@ -128,7 +192,12 @@
     </div>
 
     <div class="smallContainer">
-       <img src="./assets/photos/x.jpg">
+        <picture>
+        <source media="(min-width:601px)" srcset="./assets/photos/sound-frequency-graph-W-960.jpg"/>
+        <source media="(max-width:600px)" srcset="./assets/photos/sound-frequency-graph-M.jpg"/>
+        <img src="./assets/photos/sound-frequency-graph-W-960.jpg">
+        </picture>
+       
        
     </div>
 
@@ -138,9 +207,13 @@
 
      <div class="smallContainer">
         <img src="./assets/photos/Orcas4_Halifax_Express_J27.jpg">
-        <div class="caption">A southern resident orca whale is dwarfed by the hull of a ship in the Haro Strait. The west side of San Juan Island is a primary foraging ground for the southern residents but also a shipping route for container ships, oil tankers, and other commercial traffic to and from the Port of Vancouver, the busiest by tonnage on the West Coast. Ken Rea/Special to the Seattle Times.</div>
+        <div class="caption">Southern resident orca J27 is dwarfed by the hull of a ship in Haro Strait. The west side of San Juan Island is a primary foraging ground for the southern residents but also a shipping route for container ships, oil tankers, and other commercial traffic to and from the Port of Vancouver, the busiest by tonnage on the West Coast. (Ken Rea / Special to the Seattle Times)</div>
         </div>
-        <div class="constrained"></div>
+        <div class="constrained" style="margin:0 auto 40px;width:100%">
+
+            <h3 style="text-align:center;font-family: Helvetica Neue, Helvetica, sans-serif;text-transform:uppercase;">How these ships sound underwater</h3>
+            <p class="aside-text" style="padding-left:0">A container ship, bulk carrier and car carrier groaned through the Haro Strait on a winter day in March, while a hydrophone captured the sounds from nearby San Juan Island. Listen to the recordings here.</p>
+        </div>
         <div class="smallContainer">
         <div class="mediaContainer">
             <div class="mediaContainer-item">
@@ -151,7 +224,7 @@
 
             </div>
             <div class="mediaContainer-item">
-                <img src="./assets/photos/Orca4_Alcor.jpg">
+                <img src="./assets/photos/Orcas4_Oil_tanker_Alcor.jpg">
                 <div class="caption">Bulk carrier Alcor on its last voyage
                 <audio controls><source src="./assets/audio/Alcor.mp3" type="audio/mpeg"></audio>
                     
@@ -174,7 +247,7 @@
     </div>
 
     <img src="./assets/photos/Orcas4_dorsals_whale_watch.jpg">
-    <div class="caption">Whale watchers from B.C. observe transient orcas. In an industry that draws about 500,000 people a year, southern resident orcas now comprise only 10- to 15 percent of sightings; most are humpbacks, gray whales and transients. (Steve Ringman / The Seattle Times)</div>
+    <div class="caption">Whale watchers from B.C. observe transient orcas. In an industry that draws about 500,000 people a year, southern resident orcas now comprise only 10 to 15 percent of sightings; most are humpbacks, gray whales and transients. (Steve Ringman / The Seattle Times)</div>
 
     <div class="constrained">
         <%= t.renderMarkdown(archieml.story.whalewatching) %>
@@ -190,7 +263,7 @@
         <%= t.renderMarkdown(archieml.story.balcomb) %>
     </div>
 
-    <img src="./assets/photos/Orcas4_Whale_watch_going_fast.jpg">
+    <img src="./assets/photos/Orcas4_Whale_watch_going_fast_crop.jpg">
     <div class="caption">Speed is a top factor in the amount of noise orcas receive from vessel traffic. This whale watching boat is headed back to port after an evening cruise last July along the west side of San Juan Island. (Steve Ringman / The Seattle Times)</div>
    
 
@@ -198,8 +271,8 @@
         <%= t.renderMarkdown(archieml.story.fishermen) %>
     </div>
 
-    <img src="./assets/photos/Orca_Chinook.jpg">
-    <div class="caption">A young resident killer whale chases a chinook salmon near San Juan Island in September 2017. (John Durban/NOAA; Holly Fearnback/ SR3; Lance Barrett-Lennard/Vancouver Aquarium, under NMFS permit 19091)</div>
+    <img src="./assets/photos/Orcas4_chinook_hunt_horizontal.jpg">
+    <div class="caption">L121, a young southern resident killer whale, chases a chinook salmon near Vancouver Island in September 2017, photographed by researchers using a drone flown more than 100 feet above the water. (John Durban / NOAA SWFSC; Holly Fearnbach / SR3; Lance Barrett-Lennard / Vancouver Aquarium, under NMFS permit 19091)</div>
 
     <div class="constrained" style="font-weight:bold;font-style:italic">
         <%= t.renderMarkdown(archieml.story.tagline) %>
@@ -207,7 +280,7 @@
 
     
     <section class="constrained">
-    <ul class="aside-text" style="; padding-left:0">
+    <ul class="aside-text" style="padding-left:0">
         <h3 style="text-align:center;">CREDITS</h3>
         <div style="column-count:2;list-style-type: none">
         <li><strong>Reporter:</strong>  Lynda V. Mapes</li>
@@ -218,20 +291,45 @@
         <li><strong>Video editor:</strong>  Lauren Frohne</li>
         <li><strong>Graphic artist:</strong>  Emily M. Eng</li>
         <li><strong>Art director and developer:</strong>  Frank Mina</li>
-        <li><strong>Page designer:</strong>  Rita Wong</li>
-        <li><strong>Engagement:</strong>  <br/>Jeff Albertson, Gina Cole</li>
-        <li><strong>Copy editor:</strong>  Laura Gordon</li>
+        <li><strong>Engagement:</strong>  Jeff Albertson, Gina Cole</li>
+        <li><strong>Project coordinator:</strong>  Laura Gordon</li>
         </div>
 
+
     </ul>
+    <div class="caption" style="padding-top:40px;"> The opening video of a diving orca shows L95 hunting a salmon on the west side of San Juan Island in September 2015. (NWFSC / NOAA Fisheries under permit number 16163)</div>
     </section>
     
    
     
     </section>
 
+    <section class="text-block">
+    <div id="coral_talk_stream" class="constrained"></div>
+    </section>
+
+    <%= t.include("partials/_navBottom.html") %>
+    
+    
+
+
     
     <script src="app.js" async></script>
+    <script>
+      var data = <%= JSON.stringify(json.echolocation_Sheet1) %>;
+    </script>
+
+    <script src="https://seattletimes.talk.coralproject.net/static/embed.js" async onload="
+
+      Coral.Talk.render(document.getElementById('coral_talk_stream'), {
+
+        talk: 'https://seattletimes.talk.coralproject.net/'
+
+      });
+
+    "></script>
+    
+    
     <% if (json.project.production) { %>
     <%= !json.project.embedded ? t.include("partials/_analytics.html") : "" %>
     <%= t.include("partials/_workHere.html") %>
