@@ -4,7 +4,7 @@
 
 require("component-responsive-frame/child");
 var dot = require("./lib/dot");
-var jq = require("jquery");
+var $ = require("jquery");
 
 var template = dot.compile(require("./_info.html"));
 
@@ -31,8 +31,8 @@ qsa(".goto").forEach(function(btn) {
 			selectedIndex = Math.min(options.length - 1, selectedIndex + 1);
 		}
 
-		jq(".goto.back").toggleClass("disabled", selectedIndex == 0);
-    jq(".goto.next").toggleClass("disabled", selectedIndex == options.length - 1);
+		$(".goto.back").toggleClass("disabled", selectedIndex == 0);
+    $(".goto.next").toggleClass("disabled", selectedIndex == options.length - 1);
 
 		document.querySelector(".details").innerHTML = template(data[options[selectedIndex]]);
     if (document.querySelector(".selected")) document.querySelector(".selected").classList.remove("selected");

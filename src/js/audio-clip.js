@@ -1,16 +1,17 @@
 var $ = require("./lib/qsa");
 
-var makePlayer = function(id) {
-  return `
-<iframe src="//players.brightcove.net/1509317113/V1eCvUwO2g_default/index.html?videoId=${id}&autoplay=true" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
-`;
+var audioPlayer = document.querySelector(".audio-clip");
+console.log(audioPlayer);
+
+audioPlayer.addEventListener("click", noise);
+
+function noise() {
+	var sound = document.getAttribute("data-audio");
+	sound.play();
 };
 
-$(".audio-clip").forEach(function(container) {
-  var id = container.getAttribute("data-id");
-  var replace = function() {
-    container.innerHTML = makePlayer(id);
-    container.removeEventListener("click", replace);
-  };
-  container.addEventListener("click", replace);
-});
+console.log(audioPlayer);
+
+
+console.log(sound);
+
