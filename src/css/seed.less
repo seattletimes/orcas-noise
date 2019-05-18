@@ -9,6 +9,30 @@
 @import "bc-preroll";
 @import "eloc";
 
+  .vid-desktop {
+    display:block;
+
+    @media @tablet {
+    display:none;
+    }
+
+    @media @mobile {
+    display:none;
+    }
+  }
+
+  .vid-tablet {
+  display:none;
+
+  @media @tablet {
+    display:block;
+  }
+
+  @media @mobile {
+    display:block;
+  }
+  }
+
   .hammer {
     font-size:80px;
     font-style:italic;

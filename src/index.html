@@ -12,8 +12,14 @@
     <section class="content text-block" id="projects" style="background-color:black;padding-top:0px;">
         <header class="splash">
         <iframe src="./assets/audio/2-seconds-of-silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-            <video src="./assets/video/1_Sound_IntroOrcaDive_fade.mp4" autoplay playsinline muted>
+            <div class="vid-desktop">
+            <video src="./assets/video/1_Sound_IntroOrcaDive_fade.mp4" autoplay playsinline>
             </video>
+            </div>
+            <div class="vid-tablet">
+            <video  src="./assets/video/1_Sound_IntroOrcaDive_fade.mp4" autoplay playsinline muted>
+            </video>
+            </div>
             
             <div class="headline">
                 <h1  class="opposite hammer">THE ROAR BELOW</h1>
@@ -149,6 +155,73 @@
         <img src="./assets/photos/Orcas4_namu_01.jpg">
         <div class="caption">Jeff Bradley, mammology collections manager at the Burke Musuem of Natural History and Culture, holds a jawbone from Namu. The world's first captive performing killer whale, Namu was brought by Ted Griffin to his aquarium on Elliott Bay in 1965. The big sockets in the jawbone held his teeth. (Steve Ringman / The Seattle Times)</div>
     </div>
+
+    <div class="constrained" style="margin:0 auto 40px;width:100%">
+
+            <h3 style="text-align:center;font-family: Helvetica Neue, Helvetica, sans-serif;text-transform:uppercase;border:none">Types of sounds</h3>
+            <p class="aside-text" style="padding-left:0">Killer whales make three different types of sounds: whistles, calls and clicks. Whistles and calls are used for communication, while echolocation clicks help with navigation.</p>
+        </div>
+        <div class="smallContainer">
+        <div class="mediaContainer">
+            <div class="mediaContainer-item">
+                <img src="./assets/photos/sound-types-W-clicks.jpg">
+                <h3 style="font-family: Helvetica Neue, Helvetica, sans-serif;text-transform:uppercase;border:none">Clicks</h3>
+                <div class="aside-text" style="padding-left:0;margin: 0 0 30px 0;">Sounds are so important to whales that within days of birth calves begin to vocalize. Around 2 months old, calves can send pulse calls similar to the adults. They selectively learn calls from their mother as they mature.</div>
+                <div class="audio-clip">
+                <audio id="audClicks"><source src="./assets/audio/clicks.wav" type="audio/mpeg"></audio>
+                <button id="btnClicks" aria-label="Play audio">
+    <span>
+      
+      <svg viewbox="0 0 10 10" preserveAspectRatio="xMidYMid meet" role="img" alt="Play icon">
+        
+        <polygon points="9,5 2.648858990830108,8.23606797749979 2.648858990830107,1.7639320225002106" fill="#000" />
+      </svg>
+      Play audio
+    </span>
+  </button>
+  </div>                    
+</div>
+            <div class="mediaContainer-item">
+                <img src="./assets/photos/sound-types-W-calls.jpg">
+                <h3 style="font-family: Helvetica Neue, Helvetica, sans-serif;text-transform:uppercase;border:none">Calls</h3>
+                <div class="aside-text" style="padding-left:0;margin: 0 0 30px 0;">Calls that always sound the same are called discrete or stereotyped calls. Pods that share a number of discrete call types form an acoustic clan with its own unique vocal tradition. Even within a clan, different groups can have their own unique way of making certain calls and forming their own dialects. These dialects are distinct enough that no two are the same.</div>
+                <div class="audio-clip">
+                <audio id="audCalls"><source src="./assets/audio/calls.wav" type="audio/mpeg"></audio>
+                <button id="btnCalls" aria-label="Play audio">
+    <span>
+      
+      <svg viewbox="0 0 10 10" preserveAspectRatio="xMidYMid meet" role="img" alt="Play icon">
+        
+        <polygon points="9,5 2.648858990830108,8.23606797749979 2.648858990830107,1.7639320225002106" fill="#000" />
+      </svg>
+      Play audio
+    </span>
+  </button>
+  </div>
+
+</div>
+            <div class="mediaContainer-item">
+                <img src="./assets/photos/sound-types-W-whistle.jpg">
+                <h3 style="font-family: Helvetica Neue, Helvetica, sans-serif;text-transform:uppercase;border:none">Whistles</h3>
+                <div class="aside-text" style="padding-left:0; margin-bottom:40px;">Whistles are continuous single tones at high frequencies used for close-range communication.
+Calls are made in lower frequencies, and can travel up to 9 miles. Pulse calls create rapid streams of sound and are the most common vocalization. These calls are used for finding and staying in contact with one another and coordinating movement.</div>
+                <div class="audio-clip">
+                <audio id="audWhistles"><source src="./assets/audio/whistle.wav" type="audio/mpeg"></audio>
+                <button id="btnWhistles" aria-label="Play audio">
+    <span>
+      
+      <svg viewbox="0 0 10 10" preserveAspectRatio="xMidYMid meet" role="img" alt="Play icon">
+        
+        <polygon points="9,5 2.648858990830108,8.23606797749979 2.648858990830107,1.7639320225002106" fill="#000" />
+      </svg>
+      Play audio
+    </span>
+  </button>
+  </div>
+ </div>
+
+</div>
+<div class="caption" style="text-align: center;">Source: Marla Holt, National Oceanic and Atmospheric Administration, Northwest Fisheries Science Center</div>
     
     <div class="constrained">
         <%= t.renderMarkdown(archieml.story.culture) %>
@@ -232,9 +305,7 @@
     </span>
   </button>
   </div>                    
-                
-
-            </div>
+</div>
             <div class="mediaContainer-item">
                 <img src="./assets/photos/Orcas4_Oil_tanker_Alcor.jpg">
                 <div class="caption" style="margin-bottom:20px;color:black;"><strong>Bulk carrier Alcor</strong></div>
@@ -251,10 +322,7 @@
     </span>
   </button>
   </div>
-                    
-                
-                
-            </div>
+</div>
             <div class="mediaContainer-item">
                 <img src="./assets/photos/Orcas4_Ivory_Arrow_car_carrier.jpg">
                 <div class="caption" style="margin-bottom:20px;color:black;"><strong>Car carrier Ivory Arrow</strong></div>
@@ -271,12 +339,8 @@
     </span>
   </button>
   </div>
-                
-                
-                
-            </div>
-        </div>
-        
+ </div>
+</div>
 
     <div class="constrained">
         <%= t.renderMarkdown(archieml.story.calls) %>
@@ -335,6 +399,7 @@
     </section>
     
     </section>
+    <%= t.include("partials/_dontMiss.html") %>
 
     <%= t.include("partials/_navBottom.html") %>
     

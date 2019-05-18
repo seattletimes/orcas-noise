@@ -28,25 +28,25 @@ var onScroll = function() {
     var bounds = stage.getBoundingClientRect();
     if (bounds.top < window.innerHeight && bounds.bottom > 0) {
       var layerID = stage.getAttribute("data-layer");
-      
       if (layerID == current) return;
       var layer = document.querySelector("#" + layerID);
-      if (!layer) return;
-      if (layerID != "Existing") {
+      if (!layer) return;      
+      if (layerID != 'Existing') {
         savage(map).addClass("zoomed");
       } else {
         savage(map).removeClass("zoomed");
       }
-
       var active = document.querySelector(".activated");
       if (active) savage(active).removeClass("activated");
-      savage(layer).addClass("activated");
+      savage(layer).addClass("activated");      
       current = layerID;
       camera.zoomTo(layer, window.innerWidth > 1000 ? 200 : 50, 500);
       return;
     }
   }
 }
+
+
 
 var button0 = document.querySelector("#btn0");
     button0.addEventListener("click", player0);
@@ -107,6 +107,24 @@ var button0 = document.querySelector("#btn0");
     function player11() {
         var audio11 = document.querySelector("#aud11");
         audio11.play();
+    };
+    var buttonClicks = document.querySelector("#btnClicks");
+    buttonClicks.addEventListener("click", playerClicks);
+    function playerClicks() {
+        var audioClicks = document.querySelector("#audClicks");
+        audioClicks.play();
+    };
+    var buttonWhistles = document.querySelector("#btnWhistles");
+    buttonWhistles.addEventListener("click", playerWhistles);
+    function playerWhistles() {
+        var audioWhistles = document.querySelector("#audWhistles");
+        audioWhistles.play();
+    };
+    var buttonCalls = document.querySelector("#btnCalls");
+    buttonCalls.addEventListener("click", playerCalls);
+    function playerCalls() {
+        var audioCalls = document.querySelector("#audCalls");
+        audioCalls.play();
     };
     var buttonLA = document.querySelector("#btnLA");
     buttonLA.addEventListener("click", playerLA);
