@@ -12,7 +12,7 @@
     <section class="content text-block" id="projects" style="background-color:black;padding-top:0px;">
         <header class="splash">
         <iframe src="./assets/audio/2-seconds-of-silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-            <video src="./assets/video/1_Sound_IntroOrcaDive_fade.mp4" autoplay playsinline>
+            <video src="./assets/video/1_Sound_IntroOrcaDive_fade.mp4" autoplay playsinline muted>
             </video>
             
             <div class="headline">
@@ -211,32 +211,68 @@
         </div>
         <div class="constrained" style="margin:0 auto 40px;width:100%">
 
-            <h3 style="text-align:center;font-family: Helvetica Neue, Helvetica, sans-serif;text-transform:uppercase;">How these ships sound underwater</h3>
+            <h3 style="text-align:center;font-family: Helvetica Neue, Helvetica, sans-serif;text-transform:uppercase;border:none">How these ships sound underwater</h3>
             <p class="aside-text" style="padding-left:0">A container ship, bulk carrier and car carrier groaned through the Haro Strait on a winter day in March, while a hydrophone captured the sounds from nearby San Juan Island. Listen to the recordings here.</p>
         </div>
         <div class="smallContainer">
         <div class="mediaContainer">
             <div class="mediaContainer-item">
                 <img src="./assets/photos/Orca4_container_ship_Los_Angeles.jpg">
-                <div class="caption">Container ship Los Angeles
-                <audio controls><source src="./assets/audio/Xin_Los_Angeles.mp3" type="audio/mpeg"></audio>                    
-                </div>
+                <div class="caption" style="margin-bottom:20px;color:black;"><strong>Container ship Xin Los Angeles</strong></div>
+                <div class="audio-clip">
+                <audio id="audLA"><source src="./assets/audio/Xin_Los_Angeles.mp3" type="audio/mpeg"></audio>
+                <button id="btnLA" aria-label="Play audio">
+    <span>
+      
+      <svg viewbox="0 0 10 10" preserveAspectRatio="xMidYMid meet" role="img" alt="Play icon">
+        
+        <polygon points="9,5 2.648858990830108,8.23606797749979 2.648858990830107,1.7639320225002106" fill="#000" />
+      </svg>
+      Play audio
+    </span>
+  </button>
+  </div>                    
+                
 
             </div>
             <div class="mediaContainer-item">
                 <img src="./assets/photos/Orcas4_Oil_tanker_Alcor.jpg">
-                <div class="caption">Bulk carrier Alcor on its last voyage
-                <audio controls><source src="./assets/audio/Alcor.mp3" type="audio/mpeg"></audio>
+                <div class="caption" style="margin-bottom:20px;color:black;"><strong>Bulk carrier Alcor</strong></div>
+                <div class="audio-clip">
+                <audio id="audAlcor"><source src="./assets/audio/Alcor.mp3" type="audio/mpeg"></audio>
+                <button id="btnAlcor" aria-label="Play audio">
+    <span>
+      
+      <svg viewbox="0 0 10 10" preserveAspectRatio="xMidYMid meet" role="img" alt="Play icon">
+        
+        <polygon points="9,5 2.648858990830108,8.23606797749979 2.648858990830107,1.7639320225002106" fill="#000" />
+      </svg>
+      Play audio
+    </span>
+  </button>
+  </div>
                     
-                </div>
+                
                 
             </div>
             <div class="mediaContainer-item">
                 <img src="./assets/photos/Orcas4_Ivory_Arrow_car_carrier.jpg">
-                <div class="caption">Car carrier Ivory Arrow
-                <audio controls><source src="./assets/audio/Ivory_Arrow.mp3" type="audio/mpeg"></audio>
+                <div class="caption" style="margin-bottom:20px;color:black;"><strong>Car carrier Ivory Arrow</strong></div>
+                <div class="audio-clip">
+                <audio id="audArrow"><source src="./assets/audio/Ivory_Arrow.mp3" type="audio/mpeg"></audio>
+                <button id="btnArrow" aria-label="Play audio">
+    <span>
+      
+      <svg viewbox="0 0 10 10" preserveAspectRatio="xMidYMid meet" role="img" alt="Play icon">
+        
+        <polygon points="9,5 2.648858990830108,8.23606797749979 2.648858990830107,1.7639320225002106" fill="#000" />
+      </svg>
+      Play audio
+    </span>
+  </button>
+  </div>
                 
-                </div>
+                
                 
             </div>
         </div>
@@ -294,41 +330,19 @@
         <li><strong>Engagement:</strong>  Jeff Albertson, Gina Cole</li>
         <li><strong>Project coordinator:</strong>  Laura Gordon</li>
         </div>
-
-
     </ul>
     <div class="caption" style="padding-top:40px;"> The opening video of a diving orca shows L95 hunting a salmon on the west side of San Juan Island in September 2015. (NWFSC / NOAA Fisheries under permit number 16163)</div>
     </section>
     
-   
-    
-    </section>
-
-    <section class="text-block">
-    <div id="coral_talk_stream" class="constrained"></div>
     </section>
 
     <%= t.include("partials/_navBottom.html") %>
-    
-    
-
-
     
     <script src="app.js" async></script>
     <script>
       var data = <%= JSON.stringify(json.echolocation_Sheet1) %>;
     </script>
-
-    <script src="https://seattletimes.talk.coralproject.net/static/embed.js" async onload="
-
-      Coral.Talk.render(document.getElementById('coral_talk_stream'), {
-
-        talk: 'https://seattletimes.talk.coralproject.net/'
-
-      });
-
-    "></script>
-    
+      
     
     <% if (json.project.production) { %>
     <%= !json.project.embedded ? t.include("partials/_analytics.html") : "" %>

@@ -107,11 +107,11 @@ But it’s not only the southern residents who are masters of the kill.
 
 The Tyrannosaurus rex of the sea, orcas worldwide are devastating predators, ready to rip with a mouthful of conical interlocking teeth, up to 4 inches long.
 
-In every ocean of the world, orcas have evolved to target specific prey they have learned to hunt, using local environmental features and seasonal patterns in the waters they dominate. Ruthless, precision carnivores, orca live up to their species name, Orcinus orca: from the realm of the dead. They get their kill wherever it is, whatever it takes.
+In every ocean of the world, orcas have evolved to target specific prey they have learned to hunt, using local environmental features and seasonal patterns in the waters they dominate. Ruthless, precision carnivores, orca live up to their species name, <span style="font-style:italic;">Orcinus orca</span>: from the realm of the dead. They get their kill wherever it is, whatever it takes.
 
 With the orcas’ cunning intelligence, swaggering power and martial-arts moves, no animal on their menu is safe. Worldwide, orcas target about 140 species. Stingrays. Sharks. Sea lions. Minke whales. Octopus. And much, much more.
 
-Their teeth reveal their obsessions. Shark-killers’ teeth become sanded down from taking on rough-skinned prey. Chinook shredders like the southern residents have needle sharp teeth and tear big fish in half with a shake of their heads.
+Their teeth reveal their obsessions. Shark-killers’ teeth become sanded down from taking on rough-skinned prey. Chinook shredders like the southern residents have needle-sharp teeth and tear big fish in half with a shake of their heads.
 :end
 
 ancienthunters:
@@ -136,25 +136,19 @@ maritimeculture:
 With a rhythmic thudding sound, the container ship powers into the north end of Haro Strait and down the west side of San Juan Island. Scientist Rob Williams of the nonprofit Oceans Initiative has a hydrophone underwater, playing the ship’s noise over a speaker aboard the research boat Molly B.
 
 The boat’s pilot, Joe Gaydos, science director of the nonprofit SeaDoc Society, hears the ship from 10 miles away, long before he sees it.
+
+“It looks like a small city,” he says as the ship, the Xin Los Angeles — flagged in Hong Kong and the longest container ship in the world when built in 2006 — barrels along at 22 knots. With a capacity for 9,600 containers stacked seven rows high, it is nearly twice as long as the Space Needle is tall. The ship obliterates the view of Lime Kiln Lighthouse and leaves a seething wake.
 :end
 
 smallcity:
-“It looks like a small city,” he says as the ship, the Xin Los Angeles — flagged in Hong Kong and the longest container ship in the world when built in 2006 — barrels along at 22 knots. With a capacity for 9,600 containers stacked seven rows high, it is nearly twice as long as the Space Needle is tall. The ship obliterates the view of Lime Kiln Lighthouse and leaves a seething wake.
-
 It’s an ordinary moment in the Haro Strait, this long stretch of water that connects the U.S. and Canada and serves as a main drag for shipping traffic to and from Vancouver. But it’s also an extraordinary disturbance for animals sharing the waters and soundscape. Loafing harbor porpoise chuffing at the surface scram.
-:end
 
-shipping:
 As the Northwest grows, and its economy booms at the closest ports to the Pacific Rim, not a day — and scarcely an hour — passes without heavy industrial shipping traffic, recreational boaters, fishing vessels and ferries transiting critical habitat of the southern residents, including their prime foraging grounds in the summer.
 
 On this recent weekday, six ships in five hours traveled the Haro Strait flagged in four nations. There were the container ship Xin Los Angeles; one vehicle carrier; two cargo carriers; one bulk carrier; and one Canadian military training vessel, the steel-hulled Renard — dubbed Orca Class — with a rooster tail of water shooting behind it. A blazing fast crab boat was so far away it took binoculars to see, but could be heard for miles.
-:end 
 
-vancouverport:
 The Northwest is a major maritime hub. The ports of Seattle and Tacoma together are the fourth largest container gateway in North America, with $73 billion in international trade, according to the Northwest Seaport Alliance. In Washington state alone, the maritime sector employs nearly 70,000 workers and generates more than $21 billion in revenue, according to the state Department of Commerce.
-:end
 
-trade:
 The Port of Vancouver sustains trade with more than 170 economies around the world and supports more than 96,000 jobs in B.C. alone. In 2018, 147 million tons of cargo moved through the port, valued at $200 billion. The Port of Vancouver saw record-breaking traffic in 2017, and again in 2018.
 
 Current demand forecasts in a study for the Port of Vancouver anticipate container trade to <a target="_blank" href="http://www.robertsbankterminal2.com/wp-content/uploads/RBT2-TAG-Summary-Report-SRKW-November-2013.pdf">double in the next 10-15 years and nearly triple by 2030</a>. 
