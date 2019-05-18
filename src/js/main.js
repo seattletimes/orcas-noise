@@ -21,6 +21,8 @@ var camera = new Camera(map);
 var stages = $(".layer").reverse();
 var current = null;
 var existing = document.querySelector("#Existing");
+var audio = $(".layer .audio-clip").reverse();
+console.log(audio);
 
 
 
@@ -29,6 +31,7 @@ var onScroll = function() {
   for (var i = 0; i < stages.length; i++) {
     var stage = stages[i];
     var bounds = stage.getBoundingClientRect();
+    console.log(bounds);
     if (bounds.top < window.innerHeight && bounds.bottom > 0) {
       var layerID = stage.getAttribute("data-layer");
       if (layerID == current) return;
@@ -48,6 +51,8 @@ var onScroll = function() {
     }
   }
 }
+
+
 
 var button0 = document.querySelector("#btn0");
     button0.addEventListener("click", player0);
@@ -149,6 +154,7 @@ var button0 = document.querySelector("#btn0");
 
 window.addEventListener("scroll", debounce(onScroll, 500));
 onScroll();
+onPlay();
 
 
 
