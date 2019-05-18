@@ -6,6 +6,7 @@ require("component-responsive-frame/child");
 var dot = require("./lib/dot");
 var $ = require("jquery");
 
+
 var template = dot.compile(require("./_info.html"));
 
 var qsa = s => Array.prototype.slice.call(document.querySelectorAll(s));
@@ -39,5 +40,7 @@ qsa(".goto").forEach(function(btn) {
     document.querySelector("#" + options[selectedIndex]).classList.add("selected");
 	});
 });
+
+
 
 

@@ -4,7 +4,11 @@
   
     <%= t.include("partials/_head.html", grunt.data.json) %>
     <link rel="stylesheet" type="text/css" href="style.css">
+    
+
     <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+    
+
   </head>
   <body>
     <%= t.include("partials/_gtm.html") %>
@@ -23,7 +27,7 @@
             
             <div class="headline">
                 <h1  class="opposite hammer">THE ROAR BELOW</h1>
-                <h1 class="opposite subhead">How our noise is hurting orcas' search for salmon
+                <h1 class="opposite subhead">How our noise is hurting orcas&#8217; search for salmon
                 </h1>
             </div>
             <div class="fade">
@@ -407,6 +411,7 @@ Calls are made in lower frequencies, and can travel up to 9 miles. Pulse calls c
     <script>
       var data = <%= JSON.stringify(json.echolocation_Sheet1) %>;
     </script>
+   
       
     
     <% if (json.project.production) { %>

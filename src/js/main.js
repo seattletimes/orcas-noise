@@ -2,6 +2,8 @@ require("./lib/social");
 require("./lib/ads");
 require("./bc-preroll");
 require("./eloc");
+var $ = require("jquery");
+
 
 //require("./lib/comments");
 var paywall = require("./lib/paywall");
@@ -19,6 +21,7 @@ var camera = new Camera(map);
 var stages = $(".layer").reverse();
 var current = null;
 var existing = document.querySelector("#Existing");
+
 
 
 var onScroll = function() {
@@ -45,8 +48,6 @@ var onScroll = function() {
     }
   }
 }
-
-
 
 var button0 = document.querySelector("#btn0");
     button0.addEventListener("click", player0);
@@ -144,6 +145,7 @@ var button0 = document.querySelector("#btn0");
         var audioArrow = document.querySelector("#audArrow");
         audioArrow.play();
     };
+
 
 window.addEventListener("scroll", debounce(onScroll, 500));
 onScroll();
