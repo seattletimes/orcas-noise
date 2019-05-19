@@ -11,11 +11,20 @@ var template = dot.compile(require("./_info.html"));
 
 var qsa = s => Array.prototype.slice.call(document.querySelectorAll(s));
 
+function resetNavigationButtons() {
+	var selected = document.querySelector(".selected");
+	var selectedIndex = selected ? options.indexOf(selected.id) : -1;
+	$(".goto.back").toggleClass("disabled", selectedIndex == 0);
+  $(".goto.next").toggleClass("disabled", selectedIndex == options.length - 1);
+}
+
 qsa(".st-group").forEach(function(group) {
   group.addEventListener("click", function(e) {
     document.querySelector(".details").innerHTML = template(data[e.target.parentElement.id]);
     if (document.querySelector(".selected")) document.querySelector(".selected").classList.remove("selected");
-    e.target.parentElement.classList.add("selected");
+		e.target.parentElement.classList.add("selected");
+
+		resetNavigationButtons();
   });
 });
 
@@ -32,12 +41,11 @@ qsa(".goto").forEach(function(btn) {
 			selectedIndex = Math.min(options.length - 1, selectedIndex + 1);
 		}
 
-		$(".goto.back").toggleClass("disabled", selectedIndex == 0);
-    $(".goto.next").toggleClass("disabled", selectedIndex == options.length - 1);
-
 		document.querySelector(".details").innerHTML = template(data[options[selectedIndex]]);
     if (document.querySelector(".selected")) document.querySelector(".selected").classList.remove("selected");
-    document.querySelector("#" + options[selectedIndex]).classList.add("selected");
+		document.querySelector("#" + options[selectedIndex]).classList.add("selected");
+		
+		resetNavigationButtons();
 	});
 });
 
