@@ -5,6 +5,7 @@ require("./eloc");
 var $ = require("jquery");
 
 
+
 //require("./lib/comments");
 var paywall = require("./lib/paywall");
 setTimeout(() => paywall(11006469), 3000);
@@ -21,9 +22,6 @@ var camera = new Camera(map);
 var stages = $(".layer").reverse();
 var current = null;
 var existing = document.querySelector("#Existing");
-var audio = $(".layer .audio-clip").reverse();
-console.log(audio);
-
 
 
 var onScroll = function() {
@@ -154,7 +152,7 @@ var button0 = document.querySelector("#btn0");
 
 window.addEventListener("scroll", debounce(onScroll, 500));
 onScroll();
-onPlay();
+
 
 
 

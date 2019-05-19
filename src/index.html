@@ -4,7 +4,7 @@
   
     <%= t.include("partials/_head.html", grunt.data.json) %>
     <link rel="stylesheet" type="text/css" href="style.css">
-    
+    <script src="./js/noframework.waypoints.min.js"></script>
 
     <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
     
@@ -169,8 +169,9 @@
         <div class="mediaContainer">
             <div class="mediaContainer-item">
                 <img src="./assets/photos/sound-types-W-clicks.jpg">
-                <h3 style="font-family: Helvetica Neue, Helvetica, sans-serif;text-transform:uppercase;border:none">Clicks</h3>
-                <div class="aside-text" style="padding-left:0;margin: 0 0 30px 0;">Sounds are so important to whales that within days of birth calves begin to vocalize. Around 2 months old, calves can send pulse calls similar to the adults. They selectively learn calls from their mother as they mature.</div>
+                <h3 style="font-family: Helvetica Neue, Helvetica, sans-serif;text-transform:uppercase;border:none">Echolocation click</h3>
+                <div class="aside-text" style="padding-left:0;margin: 0 0 30px 0;"><strong>Frequency:</strong> 10,000 - 100,000 Hz<br>
+<strong>Duration:</strong> 0.1 to 25 miliseconds</div>
                 <div class="audio-clip">
                 <audio id="audClicks"><source src="./assets/audio/clicks.wav" type="audio/mpeg"></audio>
                 <button id="btnClicks" aria-label="Play audio">
@@ -187,8 +188,9 @@
 </div>
             <div class="mediaContainer-item">
                 <img src="./assets/photos/sound-types-W-calls.jpg">
-                <h3 style="font-family: Helvetica Neue, Helvetica, sans-serif;text-transform:uppercase;border:none">Calls</h3>
-                <div class="aside-text" style="padding-left:0;margin: 0 0 30px 0;">Calls that always sound the same are called discrete or stereotyped calls. Pods that share a number of discrete call types form an acoustic clan with its own unique vocal tradition. Even within a clan, different groups can have their own unique way of making certain calls and forming their own dialects. These dialects are distinct enough that no two are the same.</div>
+                <h3 style="font-family: Helvetica Neue, Helvetica, sans-serif;text-transform:uppercase;border:none">Pulse call</h3>
+                <div class="aside-text" style="padding-left:0;margin: 0 0 30px 0;"><strong>Frequency:</strong> 500 - 30,000 Hz<br>
+<strong>Duration:</strong> 600 to 2,000 miliseconds</div>
                 <div class="audio-clip">
                 <audio id="audCalls"><source src="./assets/audio/calls.wav" type="audio/mpeg"></audio>
                 <button id="btnCalls" aria-label="Play audio">
@@ -206,9 +208,9 @@
 </div>
             <div class="mediaContainer-item">
                 <img src="./assets/photos/sound-types-W-whistle.jpg">
-                <h3 style="font-family: Helvetica Neue, Helvetica, sans-serif;text-transform:uppercase;border:none">Whistles</h3>
-                <div class="aside-text" style="padding-left:0; margin-bottom:40px;">Whistles are continuous single tones at high frequencies used for close-range communication.
-Calls are made in lower frequencies, and can travel up to 9 miles. Pulse calls create rapid streams of sound and are the most common vocalization. These calls are used for finding and staying in contact with one another and coordinating movement.</div>
+                <h3 style="font-family: Helvetica Neue, Helvetica, sans-serif;text-transform:uppercase;border:none">Whistle</h3>
+                <div class="aside-text" style="padding-left:0; margin-bottom:40px;"><strong>Frequency:</strong> 2,000 - 50,000 Hz<br>
+                <strong>Duration:</strong> 60 to 18,000 miliseconds</div>
                 <div class="audio-clip">
                 <audio id="audWhistles"><source src="./assets/audio/whistle.wav" type="audio/mpeg"></audio>
                 <button id="btnWhistles" aria-label="Play audio">
@@ -284,7 +286,7 @@ Calls are made in lower frequencies, and can travel up to 9 miles. Pulse calls c
 
      <div class="smallContainer">
         <img src="./assets/photos/Orcas4_Halifax_Express_J27.jpg">
-        <div class="caption">Southern resident orca J27 is dwarfed by the hull of a ship in Haro Strait. The west side of San Juan Island is a primary foraging ground for the southern residents but also a shipping route for container ships, oil tankers, and other commercial traffic to and from the Port of Vancouver, the busiest by tonnage on the West Coast. (Ken Rea / Special to the Seattle Times)</div>
+        <div class="caption">A southern resident orca is dwarfed by the hull of a ship in Haro Strait. The west side of San Juan Island is a primary foraging ground for the southern residents but also a shipping route for container ships, oil tankers, and other commercial traffic to and from the Port of Vancouver, the busiest by tonnage on the West Coast. (Ken Rea / Special to the Seattle Times)</div>
         </div>
         <div class="constrained" style="margin:0 auto 40px;width:100%">
 
