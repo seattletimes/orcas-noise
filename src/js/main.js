@@ -2,9 +2,6 @@ require("./lib/social");
 require("./lib/ads");
 require("./bc-preroll");
 require("./eloc");
-var $ = require("jquery");
-
-
 
 //require("./lib/comments");
 var paywall = require("./lib/paywall");
@@ -29,7 +26,6 @@ var onScroll = function() {
   for (var i = 0; i < stages.length; i++) {
     var stage = stages[i];
     var bounds = stage.getBoundingClientRect();
-    console.log(bounds);
     if (bounds.top < window.innerHeight && bounds.bottom > 0) {
       var layerID = stage.getAttribute("data-layer");
       if (layerID == current) return;
@@ -76,12 +72,7 @@ var button0 = document.querySelector("#btn0");
         var audio3 = document.querySelector("#aud3");
         audio3.play();
     };
-    var button5 = document.querySelector("#btn5");
-    button5.addEventListener("click", player5);
-    function player5() {
-        var audio5 = document.querySelector("#aud5");
-        audio5.play();
-    };
+    
     var button6 = document.querySelector("#btn6");
     button6.addEventListener("click", player6);
     function player6() {
