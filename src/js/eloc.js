@@ -18,17 +18,19 @@ function resetNavigationButtons() {
   $(".goto.next").toggleClass("disabled", selectedIndex == options.length - 1);
 }
 
+var options = Object.keys(window.data);
+
 qsa(".st-group").forEach(function(group) {
   group.addEventListener("click", function(e) {
-    document.querySelector(".details").innerHTML = template(data[e.target.parentElement.id]);
-    if (document.querySelector(".selected")) document.querySelector(".selected").classList.remove("selected");
+		var selectedIndex = options.indexOf(e.target.parentElement.id);
+		document.querySelector(".details").innerHTML = template(data[e.target.parentElement.id]);
+		$(".selected").removeClass("selected");
+		$("." + options[selectedIndex]).addClass("selected");
 		e.target.parentElement.classList.add("selected");
 
 		resetNavigationButtons();
   });
 });
-
-var options = Object.keys(window.data);
 
 qsa(".goto").forEach(function(btn) {
 	btn.addEventListener("click", function(e) {
@@ -42,8 +44,8 @@ qsa(".goto").forEach(function(btn) {
 		}
 
 		document.querySelector(".details").innerHTML = template(data[options[selectedIndex]]);
-    if (document.querySelector(".selected")) document.querySelector(".selected").classList.remove("selected");
-		document.querySelector("#" + options[selectedIndex]).classList.add("selected");
+    $(".selected").removeClass("selected");
+		$("." + options[selectedIndex]).addClass("selected");
 		
 		resetNavigationButtons();
 	});
