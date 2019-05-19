@@ -123,48 +123,29 @@ a {
   height: 0;
   padding-bottom: percentage(642.079 / 960);
 
-  svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
   @media @tablet {
       display: none !important;
     }
 }
 
 .image-mobile {
-  .flex(1);
-    position: relative;
-    display: none;
+  position: relative;
+  display: none;
 
-  .background, .overlay {
-    position: absolute;
-    width: 100%;
+  @media @tablet {
+    display: block;
   }
-   @media @tablet {
-      display: inline !important;
-    }
 }
 
 .overlay-mobile {
-  height: 0;
   display: none;
-
-  svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+  position: absolute;
+  top: 0;
+  width: 100%;
 
   @media @tablet {
-      display: inline !important;
-    }
+    display: block;
+  }
 }
 
 .st-group:hover, .st-group.selected {
