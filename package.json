@@ -8,7 +8,7 @@
     "url": "https://github.com/seattletimes/orcas-noise.git"
   },
   "dependencies": {
-    "angular": "^1.7.8",
+    "angular": "^1.8.0",
     "archieml": "^0.4.2",
     "async": "^2.0.0-rc.1",
     "aws-sdk": "^2.2.45",
